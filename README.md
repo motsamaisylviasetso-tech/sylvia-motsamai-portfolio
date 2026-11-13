@@ -22,6 +22,9 @@ at Botswana Accountancy College and an aspiring Data Analyst.
 - CSS
 - JavaScript
 
+## Profile Photograph
+The homepage portrait is stored in the repository root and displayed in the hero section.
+
 ## Contact
 Email: Motsamaisylviasetso@gmail.com
 

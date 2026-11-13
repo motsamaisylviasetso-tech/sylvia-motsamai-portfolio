@@ -156,26 +156,15 @@ nav a:hover {
     justify-content: center;
 }
 
-.photo-placeholder {
+.profile-photo {
+    display: block;
     width: 310px;
     height: 380px;
-    background: linear-gradient(145deg, #E9CED1, #D7AEB5);
+    object-fit: cover;
+    object-position: center;
     border-radius: 160px 160px 15px 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--dark);
     box-shadow: 15px 15px 0 rgba(166, 111, 122, 0.12);
-}
-
-.photo-placeholder span {
-    font-family: 'Playfair Display', serif;
-    font-size: 75px;
-}
-
-.photo-placeholder p {
-    font-size: 12px;
+    border: 5px solid rgba(255, 253, 252, 0.8);
 }
 
 .section {
@@ -410,7 +399,7 @@ nav a:hover {
         grid-row: 1;
     }
 
-    .photo-placeholder {
+    .profile-photo {
         width: 230px;
         height: 280px;
     }
