@@ -1,92 +1,383 @@
 
-/* GENERAL STYLING */
+/* =================================
+   SYLVIA MOTSAMAI - PORTFOLIO
+   Elegant Dusty Pink & Cream Design
+================================= */
+
+/* 1. COLOUR VARIABLES */
+:root {
+    --cream: #F8F0EF;
+    --white: #FFFDFC;
+    --dusty-pink: #D7AEB5;
+    --rose: #A66F7A;
+    --dark: #45383B;
+    --light-text: #76676B;
+}
+
+/* 2. GENERAL STYLING */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #F8F0EF;
-    color: #45383B;
-    line-height: 1.6;
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.7;
 }
 
-/* HEADER */
+a {
+    color: inherit;
+}
+
+/* 3. NAVIGATION */
 header {
-    background-color: #FFFDFC;
-    padding: 25px 8%;
+    background: var(--white);
+    padding: 22px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
 }
 
-header h2 {
-    color: #A66F7A;
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--rose);
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
 }
 
 nav a {
     text-decoration: none;
-    color: #45383B;
-    margin-left: 20px;
+    font-size: 0.9rem;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #B77F8A;
+    color: var(--rose);
 }
 
-/* HOMEPAGE */
+/* 4. HOMEPAGE */
 .hero {
-    min-height: 80vh;
+    min-height: 85vh;
+    padding: 80px 10%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 50px 20px;
+    gap: 60px;
+    background: linear-gradient(
+        120deg,
+        var(--cream),
+        #F3E3E5
+    );
 }
 
-.hero h1 {
-    font-size: 3rem;
-    color: #A66F7A;
+.hero-content {
+    max-width: 620px;
+    animation: fadeIn 1.2s ease;
+}
+
+.intro,
+.section-label {
+    color: var(--rose);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
     margin-bottom: 15px;
 }
 
-.hero p {
-    font-size: 1.1rem;
-    margin-bottom: 25px;
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.2;
+    color: var(--dark);
+    margin-bottom: 15px;
 }
 
-/* BUTTONS */
+.hero h2 {
+    color: var(--rose);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.hero-content > p:not(.intro) {
+    color: var(--light-text);
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+/* 5. PROFILE PHOTO AREA */
+.hero-image {
+    width: 300px;
+    height: 380px;
+    flex-shrink: 0;
+    background: var(--dusty-pink);
+    border: 10px solid var(--white);
+    border-radius: 160px 160px 25px 25px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(166, 111, 122, 0.15);
+}
+
+.photo-placeholder {
+    text-align: center;
+    color: var(--dark);
+    font-family: Georgia, serif;
+    font-size: 1.3rem;
+}
+
+/* 6. BUTTONS */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
 .btn {
     display: inline-block;
-    background-color: #D7AEB5;
-    color: #45383B;
-    padding: 12px 25px;
-    border-radius: 25px;
+    background: var(--rose);
+    color: white;
     text-decoration: none;
-    transition: 0.3s ease;
+    padding: 13px 25px;
+    border: 2px solid var(--rose);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #B77F8A;
-    color: white;
-    transform: translateY(-3px);
+    background: var(--dark);
+    border-color: var(--dark);
+    transform: translateY(-4px);
 }
 
-/* MOBILE DESIGN */
-@media (max-width: 768px) {
+.secondary-btn {
+    background: transparent;
+    color: var(--rose);
+}
+
+.secondary-btn:hover {
+    color: white;
+}
+
+/* 7. CONTENT SECTIONS */
+.section {
+    padding: 90px 10%;
+    animation: fadeIn 1s ease;
+}
+
+.section h2 {
+    font-family: Georgia, serif;
+    font-size: 2.4rem;
+    color: var(--rose);
+    margin-bottom: 30px;
+}
+
+.section > p:not(.section-label) {
+    max-width: 850px;
+    color: var(--light-text);
+    margin-bottom: 20px;
+}
+
+.alternate {
+    background: var(--white);
+}
+
+.content-card {
+    background: var(--white);
+    padding: 30px;
+    margin-bottom: 22px;
+    border-radius: 15px;
+    border: 1px solid #EEDDE0;
+    box-shadow: 0 5px 20px rgba(90, 60, 65, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.alternate .content-card {
+    background: var(--cream);
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(90, 60, 65, 0.09);
+}
+
+.content-card h3 {
+    color: var(--rose);
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.content-card p {
+    color: var(--light-text);
+    margin-bottom: 10px;
+}
+
+.content-card ul {
+    padding-left: 22px;
+    color: var(--light-text);
+}
+
+.content-card li {
+    margin-bottom: 8px;
+}
+
+.project-tag {
+    display: inline-block;
+    background: #F0DDE1;
+    color: #855661;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin: 12px 5px 0 0;
+    font-size: 0.8rem;
+}
+
+/* 8. REFLECTIONS */
+.reflection-heading {
+    margin-top: 55px;
+}
+
+/* 9. CONTACT */
+.contact-section {
+    text-align: center;
+    background: #F1E1E4;
+}
+
+.contact-section > p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-section a {
+    color: var(--rose);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+/* 10. FOOTER */
+footer {
+    text-align: center;
+    background: var(--dark);
+    color: var(--white);
+    padding: 30px 15px;
+    font-size: 0.85rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* 11. ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 12. TABLET AND MOBILE RESPONSIVENESS */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 65px 7%;
+    }
+
+    .hero-content > p:not(.intro) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 250px;
+        height: 310px;
+    }
+}
+
+@media (max-width: 600px) {
     header {
         flex-direction: column;
         gap: 15px;
+        padding: 18px 5%;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
     }
 
     nav a {
-        margin: 5px;
+        font-size: 0.78rem;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 55px 6%;
     }
 
     .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .section {
+        padding: 65px 7%;
+    }
+
+    .section h2 {
         font-size: 2rem;
     }
+
+    .content-card {
+        padding: 22px;
+    }
+
+    .hero-image {
+        width: 220px;
+        height: 270px;
+    }
 }
+
+/* 13. ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
