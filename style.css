@@ -431,3 +431,29 @@ nav a:hover {
         transform: none;
     }
 }
+
+
+/* Academic project screenshot preview */
+.project-gallery-preview {
+    max-width: 960px;
+    margin: 0 auto 30px;
+    padding: 12px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(69, 56, 59, 0.06);
+}
+.project-gallery-preview img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 620px;
+    object-fit: contain;
+    border-radius: 7px;
+}
+.project-gallery-preview figcaption {
+    padding: 12px 8px 3px;
+    color: var(--light-text);
+    text-align: center;
+    font-size: 13px;
+}
