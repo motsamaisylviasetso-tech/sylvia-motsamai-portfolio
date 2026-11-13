@@ -1,0 +1,92 @@
+
+/* GENERAL STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F8F0EF;
+    color: #45383B;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: #FFFDFC;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    color: #A66F7A;
+}
+
+nav a {
+    text-decoration: none;
+    color: #45383B;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #B77F8A;
+}
+
+/* HOMEPAGE */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #A66F7A;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    background-color: #D7AEB5;
+    color: #45383B;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #B77F8A;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* MOBILE DESIGN */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
